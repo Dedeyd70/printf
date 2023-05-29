@@ -17,9 +17,9 @@ int analyze(const char *format, test_t f_list[], va_list arg_list)
 	if (format[d] == '%')
 	{
 	j = 0;
-	while (f_list[j].type != NULL)
+	while (f_list[j].type != '\0')
 	{
-	if (format[d + 1] == f_list[j].type[0])
+	if (format[d + 1] == f_list[j].type)
 	{
 	dee = f_list[j].f(arg_list);
 	if (dee == -1)
@@ -29,7 +29,7 @@ int analyze(const char *format, test_t f_list[], va_list arg_list)
 	}
 	j++;
 	}
-	if (f_list[j].type == NULL && format[d + 1] != ' ')
+	if (f_list[j].type == '\0' && format[d + 1] != ' ')
 	{
 	if (format[d + 1] != '\0')
 	{
