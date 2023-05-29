@@ -32,7 +32,7 @@ int print_binary(va_list);
 int print_reversed(va_list);
 int print_hex_lower(va_list);
 int print_hex_upper(va_list);
-int analyze(const char *format, test_t f_list[], va_list arg_list);
+int analyze(const char *format, test_t[], va_list arg_list);
 int _writeputchar(char);
 
 /* Other Functions */
