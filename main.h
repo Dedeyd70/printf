@@ -16,7 +16,8 @@
 struct test
 {
 	char type;
-	int(*f)(va_list);
+	int (*f)(va_list);
+
 };
 
 /* Typedef for struct */
