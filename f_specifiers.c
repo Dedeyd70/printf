@@ -46,7 +46,7 @@ int print_percent(__attribute__((unused))va_list list)
  * @list: argument list
  * Return: number counts
  */
-int print_unsigned_integer(va_list list)
+int unsigned_integer(va_list list)
 {
 	unsigned int numb;
 

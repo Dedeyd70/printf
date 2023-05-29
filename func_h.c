@@ -64,12 +64,12 @@ void write_base(char *str)
 
 
 /**
- * base_len - calculating the length of an octal number
+ * Base_len - calculating the length of an octal number
  * @num: the num
  * @base: the base
  * Return: length of a number
  */
-unsigned int base_len(unsigned int num, int base)
+unsigned int Base_len(unsigned int num, int base)
 {
 	unsigned int j;
 
