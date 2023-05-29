@@ -3,11 +3,11 @@
 /**
  * print_char - printing characters
  * @list: argument list
- * Return: the amount of characters printed
+ * Return: 1
  */
 int print_char(va_list list)
 {
-	_writeputchar(va_arg(list, int))
+	_writeputchar(va_arg(list, int));
 	return (1);
 }
 
@@ -46,7 +46,7 @@ int print_percent(__attribute__((unused))va_list list)
  * @list: argument list
  * Return: number counts
  */
-int print unsigned_integer(va_list list)
+int print_unsigned_integer(va_list list)
 {
 	unsigned int numb;
 
