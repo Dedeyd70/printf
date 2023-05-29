@@ -21,7 +21,7 @@ int print_binary(va_list list)
 	if (num < 1)
 	return (-1);
 
-	len = base_len(num, 2);
+	len = Base_len(num, 2);
 	s = malloc(sizeof(char) * (len + 1));
 
 	if (s == NULL)
@@ -57,7 +57,7 @@ int print_binary(va_list list)
 int print_octal(va_list list)
 {
 	unsigned int num;
-	int l;
+	int l, i;
 	char *ot_rp;
 	char *rev_s;
 
@@ -71,7 +71,7 @@ int print_octal(va_list list)
 	ot_rp = malloc(sizeof(char) * (l + 1));
 	if (ot_rp == NULL)
 		return (-1);
-	for (int i = 0; num > 0; i++)
+	for (i = 0; num > 0; i++)
 	{
 		ot_rp[l] = (num % 8) + 48;
 		num = num / 8;
@@ -114,7 +114,7 @@ int hex_check(int num, char x)
 int print_hex_lower(va_list list)
 {
 	unsigned int num;
-	int l, r_num;
+	int l, i, r_num;
 	char *hex_rp;
 	char *rev_h;
 
@@ -132,7 +132,7 @@ int print_hex_lower(va_list list)
 	hex_rp = malloc(sizeof(char) * (l + 1));
 	if (hex_rp == NULL)
 		return (-1);
-	for (int i = 0; num > 0; i++)
+	for (i = 0; num > 0; i++)
 	{
 		r_num = num % 16;
 		if (r_num > 9)
@@ -162,7 +162,7 @@ int print_hex_lower(va_list list)
 int print_hex_upper(va_list list)
 {
 	unsigned int num;
-	int l, r_num;
+	int l, i, r_num;
 	char *hex_rp;
 	char *rev_h;
 
@@ -180,7 +180,7 @@ int print_hex_upper(va_list list)
 	hex_rp = malloc(sizeof(char) * (l + 1));
 	if (hex_rp == NULL)
 		return (-1);
-	for (int i = 0; num > 0; i++)
+	for (i = 0; num > 0; i++)
 	{
 		r_num = num % 16;
 		if (r_num > 9)
