@@ -49,3 +49,4 @@ int print_binary(va_list list)
 	free(rev_s);
 	return (len);
 	}
+}
