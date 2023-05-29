@@ -13,9 +13,13 @@
  */
 
 /* Forward declaration of struct test */
-struct test;
+struct test
+{
+	char type;
+	int(*f)(va_list);
+};
 
-/*typedef for struct */
+/* Typedef for struct */
 typedef struct test test_t;
 
 /* The Main Functions */
@@ -32,7 +36,7 @@ int print_binary(va_list);
 int print_reversed(va_list);
 int print_hex_lower(va_list);
 int print_hex_upper(va_list);
-int analyze(const char *format, test_t[], va_list arg_list);
+int analyze(const char *format, test_t f_list[], va_list arg_list);
 int _writeputchar(char);
 
 /* Other Functions */
@@ -42,13 +46,6 @@ char *rev_string(char *);
 void write_base(char *str);
 int print_unsigned_number(unsigned int);
 int hex_check(int, char);
-
-/* structure definition */
-struct test
-{
-	char type;
-	int (*f)(va_list);
-};
 
 
 #endif
