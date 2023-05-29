@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * print_binary - conerting numbers of base 10 to binary
+ * print_binary - converting numbers of base 10 to binary
  * @list: argument list
  * Return: the length of number printed
  */
