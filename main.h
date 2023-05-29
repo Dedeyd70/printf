@@ -4,19 +4,19 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include <stdlib.h>
-
+#include <string.h>
 
 /**
  *struct test - defines a structure for functions and symbols
  *@type: format
  *@f: the function
  */
-struct test
-{
-char type;
-int (*f)(va_list);
-};
-typedef struct test test_t
+
+/* Forward declaration of struct test */
+struct test;
+
+/*typedef for struct */
+typedef struct test test_t;
 
 /* The Main Functions */
 int _printf(const char *format, ...);
@@ -37,11 +37,18 @@ int _writeputchar(char);
 
 /* Other Functions */
 unsigned int Base_len(unsigned int, int);
-char *memcpy(char *dest, char *src, unsigned int n);
+char *custom_memcpy(char *dest, const char *src, unsigned int n);
 char *rev_string(char *);
 void write_base(char *str);
 int print_unsigned_number(unsigned int);
 int hex_check(int, char);
+
+/* structure definition */
+struct test
+{
+	char type;
+	int (*f)(va_list);
+};
 
 
 #endif
