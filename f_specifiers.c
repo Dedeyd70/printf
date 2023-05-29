@@ -11,7 +11,6 @@ int print_char(va_list list)
 	return (1);
 }
 
-
 /**
  * print_string - Printing a string
  * @list: argument list
@@ -31,7 +30,6 @@ int print_string(va_list list)
 	return (d);
 }
 
-
 /**
  * print_percent - Printing a percent sysmbol
  * @list: argument list
@@ -41,4 +39,33 @@ int print_percent(__attribute__((unused))va_list list)
 {
 	_writeputchar('%');
 	return (1);
+}
+
+/**
+ * unsigned_integer - printing unsigned int
+ * @list: argument list
+ * Return: number counts
+ */
+int print unsigned_integer(va_list list)
+{
+	unsigned int numb;
+
+	numb = va_arg(list, unsigned int);
+
+	if (numb == 0)
+		return (print_unsigned_number(numb));
+	return (0);
+}
+
+/**
+ * print_integer - Printing an integer
+ * @list: the argument list
+ * Return: the amount of chars printed
+ */
+int print_integer(va_list list)
+{
+	int num;
+
+	num = print_number(list);
+	return (num);
 }
