@@ -46,7 +46,6 @@ int print_unsigned_number(unsigned int n)
 	d = 1;
 	numb = n;
 
-<<<<<<< HEAD
 	for (; numb / d > 9; )
 		d *= 10;
 
@@ -58,6 +57,3 @@ int print_unsigned_number(unsigned int n)
 	}
 	return (l);
 }
-=======
-
->>>>>>> 3f0127f60cd50d82316bc6043b2a3abcabe5fbfd
