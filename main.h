@@ -41,6 +41,7 @@ char *memcpy(char *dest, char *src, unsigned int n);
 char *rev_string(char *);
 void write_base(char *str);
 int print_unsigned_number(unsigned int);
+int hex_check(int, char);
 
 
 #endif
