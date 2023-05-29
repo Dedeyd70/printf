@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_reversed - this calls a function in a reverse form and prints string
+ * print_reversed - a function to string in reverse form
  * @arg: The arguments passed to function.
  * Return: the amount of printed characters.
  */
