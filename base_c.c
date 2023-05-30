@@ -44,6 +44,7 @@ int print_binary(va_list list)
 	free(s);
 	return (-1);
 	}
+
 	write_base(rev_s);
 	free(s);
 	free(rev_s);
@@ -83,6 +84,7 @@ int print_octal(va_list list)
 		free(ot_rp);
 		return (-1);
 	}
+
 	write_base(rev_s);
 	free(ot_rp);
 	free(rev_s);
@@ -147,7 +149,9 @@ int print_hex_lower(va_list list)
 	hex_rp[l] = '\0';
 	rev_h = rev_string(hex_rp);
 	if (rev_h == NULL)
+	{
 		return (-1);
+	}
 	write_base(rev_h);
 	free(hex_rp);
 	free(rev_h);
@@ -196,7 +200,11 @@ int print_hex_upper(va_list list)
 	hex_rp[l] = '\0';
 	rev_h = rev_string(hex_rp);
 	if (rev_h == NULL)
+	{
+		free(hex_rp);
 		return (-1);
+	}
+	
 	write_base(rev_h);
 	free(hex_rp);
 	free(rev_h);

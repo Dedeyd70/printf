@@ -5,6 +5,8 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdint.h>
+#include <stdio.h>
 
 /**
  *struct test - defines a structure for functions and symbols
@@ -37,6 +39,7 @@ int print_binary(va_list);
 int print_reversed(va_list);
 int print_hex_lower(va_list);
 int print_hex_upper(va_list);
+int print_pointer(va_list);
 int analyze(const char *format, test_t f_list[], va_list arg_list);
 int _writeputchar(char);
 
@@ -47,6 +50,6 @@ char *rev_string(char *);
 void write_base(char *str);
 int print_unsigned_number(unsigned int);
 int hex_check(int, char);
-
-
+int handle_flags(int num, const char *negativeFlag, const char *zeroFlag)
+int handle_flags(int num, const char *positiveFlag, const char *hashFlag, const char *spaceFlag)
 #endif
