@@ -47,6 +47,8 @@ char *rev_string(char *);
 void write_base(char *str);
 int print_unsigned_number(unsigned int);
 int hex_check(int, char);
+int print_str_non_printable(va_list list);
+void printFormattedValues(void);
 
 
 #endif
