@@ -14,7 +14,7 @@ int handle_flags(int num, const char *negativeFlag, const char *zeroFlag)
 	/*Handling the negative flag*/
 	if (num < 0)
 	{
-		putchar(*negativeFlad);
+		putchar(*negativeFlag);
 		f++
 		num = -num;
 	}
