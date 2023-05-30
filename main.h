@@ -56,5 +56,8 @@ int print_str_non_printable(va_list list);
 void printFormattedValues(void);
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> a415d60c4c35bedec4ae313d8c7fa336d535ed49
 #endif
