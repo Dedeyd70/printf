@@ -10,7 +10,6 @@ void printFormattedValues(void)
 	int in = 42;
 	long long_in = 1234567890L;
 	short short_in = 99;
-	char str[20];
 
 	printf("Decimal: %d\n", in);
 	printf("Long decimal: %ld\n", long_in);
@@ -24,5 +23,4 @@ void printFormattedValues(void)
 	printf("Hexadecimal: %x\n", in);
 	printf("Long hexadecimal: %lx\n", long_in);
 	printf("Short hexadecimal: %hx\n", short_in);
-	printf("String: %S\n", str);
 }
