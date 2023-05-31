@@ -22,6 +22,8 @@ int print_reversed(va_list arg)
 	free(ptr);
 	return (s_len);
 }
+
+
 /**
  *rot13 - this converts a string to rot13.
  * @list: the string to coonvert.
@@ -31,10 +33,10 @@ int rot13(va_list list)
 {
 	int a, b;
 	char *str;
-
+	
 	char d[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char g[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
-
+	
 	str = va_arg(list, char *);
 	if (str == NULL)
 		return (-1);
@@ -49,7 +51,9 @@ int rot13(va_list list)
 			}
 		}
 		if (b == 53)
+		{
 			_writeputchar(str[a]);
+		}
 	}
 	return (a);
 }
