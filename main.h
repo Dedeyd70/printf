@@ -50,12 +50,16 @@ void write_base(char *str);
 int print_unsigned_number(unsigned int);
 int hex_check(int, char);
 int handle_flags(int num, const char *positiveFlag, const char *negativeFlag,
-		const char *zeroFlag, const char *hashFlag,
-		const char *spaceFlag);
+		const char *hashFlag, const char *spaceFlag,
+		int fieldWidth, int precision);
 int print_str_non_printable(va_list list);
 void printFormattedValues(void);
 void handle_format(const char *format, int *pr_chars);
 int analyze_format(const char *format, test_t f_list[], va_list arg_list,
 		int *pr_chars);
-
+int handle_precision(int precision);
+int handle_field_width(int num, int fieldWidth);
+int handle_length_modifiers(int num);
+int handle_minus_flag(int num, int fieldWidth, int precision);
+int handle_zero_flag(int num, int fieldWidth, int precision);
 #endif
