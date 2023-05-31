@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * handle_flags - this handles non-custom modifiers '0' and '-'
  * @num: a number to be printed with a specific flag
@@ -46,7 +47,7 @@ int handle_flags(int num, const char *positiveFlag, const char *negativeFlag,
 		f++;
 	}
 	/* prints the number */
-	f += printf("%d", num);
+	f += _printf("%d", num);
 
 	return (f);
 }

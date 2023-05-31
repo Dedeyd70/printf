@@ -12,10 +12,13 @@ int print_str_non_printable(va_list list)
 	char *str;
 	int count = 0;
 
-	str = va_arg(list, char*);
+	str = va_arg(list, char *);
 
 	if (str == NULL)
-	str = "(null)";
+	{
+		printf("(null)");
+		return (6);
+	}
 
 	for (dee = 0; str[dee] != '\0'; dee++)
 	{

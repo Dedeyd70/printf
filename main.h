@@ -5,7 +5,6 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <string.h>
-#include <stdint.h>
 #include <stdio.h>
 
 /**
@@ -55,5 +54,8 @@ int handle_flags(int num, const char *positiveFlag, const char *negativeFlag,
 		const char *spaceFlag);
 int print_str_non_printable(va_list list);
 void printFormattedValues(void);
+void handle_format(const char *format, int *pr_chars);
+int analyze_format(const char *format, test_t f_list[], va_list arg_list,
+		int *pr_chars);
 
 #endif
