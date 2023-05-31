@@ -22,11 +22,8 @@ int _printf(const char *format, ...)
 	{'X', print_hex_upper},
 	{'r', print_reversed},
 	{'R', rot13},
-<<<<<<< HEAD
 	{'p', print_pointer},
-=======
 	{'S', print_string_with_non_printable},
->>>>>>> ab404f5606cc41ef22226fbd107f85bc4698e14d
 	{0, NULL}
 	};
 

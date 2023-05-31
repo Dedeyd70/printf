@@ -1,4 +1,5 @@
-
+#include "main.h"
+#include <stdarg.h>
 /**
  * print_pointer - Prints a pointer address.
  * @list: the list of arguments.

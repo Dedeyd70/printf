@@ -47,6 +47,6 @@ int analyze(const char *format, test_t f_list[], va_list arg_list)
 	_writeputchar(format[d]);
 	pr_chars++;
 	}
-	};
+	}
 	return (pr_chars);
 }

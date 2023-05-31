@@ -74,6 +74,12 @@ unsigned int Base_len(unsigned int num, int base)
 	unsigned int j;
 	
 	for (j = 0; num > 0; j++)
+<<<<<<< HEAD
 		num = num / base;
+=======
+	{
+		num = num / base;
+	}
+>>>>>>> 8bfe460d8edf64d835d1057932fbc762615a2ecf
 	return (j);
 }
