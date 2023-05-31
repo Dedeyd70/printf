@@ -201,9 +201,10 @@ int print_hex_upper(va_list list)
 		free(hex_rp);
 		return (-1);
 	}
-	
+	{
 	write_base(rev_h);
 	free(hex_rp);
 	free(rev_h);
+	}
 	return (l);
 }

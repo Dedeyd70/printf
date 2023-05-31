@@ -70,9 +70,12 @@ void write_base(char *str)
  * Return: length of a number
  */
 unsigned int Base_len(unsigned int num, int base)
+{
 	unsigned int j;
 
 	for (j = 0; num > 0; j++)
-	num = num / base;
+	{
+		num = num / base;
+	}
 	return (j);
 }

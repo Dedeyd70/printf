@@ -50,14 +50,8 @@ char *rev_string(char *);
 void write_base(char *str);
 int print_unsigned_number(unsigned int);
 int hex_check(int, char);
-int handle_flags(int num, const char *negativeFlag, const char *zeroFlag)
-int handle_flags(int num, const char *positiveFlag, const char *hashFlag, const char *spaceFlag)
+int handle_flags(int num, const char *positiveFlag, const char *negativeFlag, const char *zeroFlag, const char *hashFlag, const char *spaceFlag);
 int print_str_non_printable(va_list list);
 void printFormattedValues(void);
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> a415d60c4c35bedec4ae313d8c7fa336d535ed49
 #endif

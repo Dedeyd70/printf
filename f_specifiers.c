@@ -24,9 +24,13 @@ int print_string(va_list list)
 	str = va_arg(list, char*);
 
 	if (str == 0)
-	str = "(null)";
+	{	
+		str = "(null)";
+	}
 	for (d = 0; str[d] != '\0'; d++)
-	_writeputchar(str[d]);
+	{
+		_writeputchar(str[d]);
+	}
 	return (d);
 }
 
@@ -37,6 +41,8 @@ int print_string(va_list list)
  */
 int print_percent(__attribute__((unused))va_list list)
 {
+	(void)list;
+
 	_writeputchar('%');
 	return (1);
 }
@@ -53,7 +59,9 @@ int unsigned_integer(va_list list)
 	numb = va_arg(list, unsigned int);
 
 	if (numb == 0)
+	{
 		return (print_unsigned_number(numb));
+	}
 	return (0);
 }
 
