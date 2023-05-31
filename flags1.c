@@ -13,41 +13,40 @@ int handle_flags(int num, const char *positiveFlag, const char *negativeFlag,
 		const char *zeroFlag, const char *hashFlag, const char *spaceFlag)
 {
 	int f = 0;
-	/*Handling the positive flag*/
+	/*positive flag*/
 	if (num >= 0)
 	{
-		putchar(*positiveFlag);
+		_writeputchar(*positiveFlag);
 		f++;
 	}
-	/*Handling the hash flag*/
+	/*hash flag*/
 	if (*hashFlag != '\0')
 	{
-		putchar(*hashFlag);
+		_writeputchar(*hashFlag);
 		f++;
 	}
-	/*Handling the space flag*/
+	/*space flag*/
 	if (*spaceFlag != '\0' && num >= 0)
 	{
-		putchar(*spaceFlag);
+		_writeputchar(*spaceFlag);
 		f++;
 	}
 
-	/*Handling the negative flag*/
+	/*negative flag*/
 	if (num < 0)
 	{
-		putchar(*negativeFlag);
+		_writeputchar(*negativeFlag);
 		f++;
 		num = -num;
 	}
-	/*Handling the zero flag*/
+	/*zero flag*/
 	if (num == 0)
 	{
-		putchar(*zeroFlag);
+		_writeputchar(*zeroFlag);
 		f++;
 	}
-	/*So printing the number*/
-	printf("%d", num);
-	f += snprintf(NULL, 0, num);
+	/* prints the number */
+	f += printf("%d", num);
 
 	return (f);
 }

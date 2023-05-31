@@ -23,7 +23,7 @@ int _printf(const char *format, ...)
 	{'r', print_reversed},
 	{'R', rot13},
 	{'p', print_pointer},
-	{'S', print_string_with_non_printable},
+	{'S', print_str_non_printable},
 	{0, NULL}
 	};
 
