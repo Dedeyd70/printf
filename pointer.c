@@ -9,11 +9,10 @@ int print_pointer(va_list list)
 {
 	int a, count;
 	void *ptr = va_arg(list, void*);
-	
+
 	char hex[17];
-	
+
 	sprintf(hex, "%p", ptr);
-	
 	count = 0;
 
 	_writeputchar('0');
