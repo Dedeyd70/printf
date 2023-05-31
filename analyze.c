@@ -1,6 +1,5 @@
 #include "main.h"
 
-
 /**
  * analyze_format - Receives the main string to parameters to print a string
  * @format: string containing the chars
